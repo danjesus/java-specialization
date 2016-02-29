@@ -2,7 +2,7 @@ package calcularIMC;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+import static org.testng.AssertJUnit.*;
 
 public class PacienteTest {
 
@@ -32,6 +32,6 @@ public class PacienteTest {
 	public void verificarDiagnotico(Double altura, Double peso, String resultadoEsperado)
 	{
 		Paciente paciente = new Paciente(altura, peso);
-		AssertJUnit.assertEquals(resultadoEsperado, paciente.diagnostico());
+		assertEquals(resultadoEsperado, paciente.diagnostico());
 	}
 }
