@@ -1,0 +1,23 @@
+package calcularIMC;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.runners.Parameterized.Parameter;
+
+public class PacienteTest {
+
+	@Test(expected=IllegalArgumentException.class)
+	public void pesoOuAlturaInvalidosDeveRetornarUmaExcecao() {
+		Paciente stub = new Paciente(0.0, 0.0);
+		stub.diagnostico();	
+	}
+	
+	@Test()
+	@Parameters({1.78, 99.00, "Baixo peso muito grave = IMC abaixo de 16 kg/m²"})
+	public void verificarDiagnotico(Double altura, Double peso, String resultadoEsperado)
+	{
+		Paciente paciente = new Paciente(altura, peso);
+		assertEquals(resultadoEsperado, paciente.diagnostico());
+	}
+}

@@ -1,0 +1,15 @@
+package calcularIMC;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PacienteTest {
+
+	@Test(expected=IllegalArgumentException.class)
+	public void pesoOuAlturaInvalidosDeveRetornarUmaExcecao() {
+		Paciente stub = new Paciente(0.0, 0.0);
+		stub.diagnostico();	
+	}
+
+}

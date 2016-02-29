@@ -1,0 +1,13 @@
+public class Principal {
+
+	public static void main(String[] args) {
+		Paciente joao = new Paciente (170.0, 3.0);
+		Paciente maria = new Paciente (1.78, 99.0);
+		Paciente jose = new Paciente (40.0, 1.10);
+		
+		System.out.println("IMC foi: " + joao.calcularIMC() + " que corresponde " + joao.diagnostico());
+		System.out.println("IMC foi: " + maria.calcularIMC() + " que corresponde " + maria.diagnostico());
+		System.out.println("IMC foi: " + jose.calcularIMC() + " que corresponde " + jose.diagnostico());
+	}
+
+}
